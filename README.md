@@ -43,7 +43,7 @@ Run
 
 - [Microverse](https://www.microverse.org/)
 - Inspiration
-- etc
+- etc..
 
 
 ## 📝License
