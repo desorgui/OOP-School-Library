@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # import person class
 require './person'
 

@@ -1,15 +1,16 @@
-class Classroom 
-    attr_accessor :label
-    attr_reader :students
-  
-    def initialize(label)
-      @label = label
-      @students = []
-    end
+# frozen_string_literal: true
 
-    def add_student(student)
-        @students.push(animal)
-        student.classroom = self
-    end
+class Classroom
+  attr_accessor :label
+  attr_reader :students
+
+  def initialize(label)
+    @label = label
+    @students = []
+  end
+
+  def add_student(student)
+    @students.push(animal)
+    student.classroom = self
+  end
 end
-  
