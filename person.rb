@@ -3,9 +3,10 @@ require './rental'
 
 # implementation person class
 class Person < Nameable
-  attr_reader :rentals
+  attr_reader :id
+  attr_accessor :name, :age, :rentals
 
-  def initialize(age, parent_permission: true, name: 'Unknown')
+  def initialize(age, name = 'Unknown', parent_permission: true)
     super()
     @id = Random.rand(1..1000)
     @name = name
@@ -13,12 +14,6 @@ class Person < Nameable
     @parent_permission = parent_permission
     @rentals = []
   end
-
-  # Getter for id
-  attr_reader :id
-  # Getters/setters for name and age
-  attr_accessor :name
-  attr_accessor :age
 
   private
 
@@ -34,7 +29,8 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(person, date)
-    Rental.new(date, self, person)
+  def add_rentals(rental)
+    @rentals.push(rental)
+    rental.person = self
   end
 end
