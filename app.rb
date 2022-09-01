@@ -121,27 +121,27 @@ class App
   end
 
   def create_rental
-    indexArr = []
+    index_arr = []
     index = nil
     p 'Please select a book: '
-    @books_list.each_with_index do |book, index|
-      indexArr.push(index)
-      puts "[#{index}] #{book.title}. By: #{book.author}"
+    @books_list.each_with_index do |book, i|
+      index_arr.push(i)
+      puts "[#{i}] #{book.title}. By: #{book.author}"
     end
-    until indexArr.include?(index)
+    until index_arr.include?(index)
       puts
       print 'Choose The correct book number: '
       index = gets.chomp.to_i
       book = @books_list[index]
     end
-    indexArr = []
+    index_arr = []
     puts
     p 'Please select the correct person number'
-    @people_list.each_with_index do |person, index|
-      indexArr.push(index)
-      puts "[#{index}] Name: #{person.name} (#{person.class.name})"
+    @people_list.each_with_index do |person, i|
+      index_arr.push(i)
+      puts "[#{i}] Name: #{person.name} (#{person.class.name})"
     end
-    until indexArr.include?(index)
+    until index_arr.include?(index)
       print 'Choose person number: '
       index = gets.chomp.to_i
       person = @people_list[index]
