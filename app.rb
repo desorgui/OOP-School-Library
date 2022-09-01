@@ -120,7 +120,7 @@ class App # rubocop:disable Metrics/ClassLength
     run_program
   end
 
-  def create_rental #rubocop:disable Metrics/ClassLength
+  def create_rental # rubocop:disable Metrics/ClassLength
     index_arr = []
     index = nil
     p 'Please select a book: '
@@ -154,7 +154,7 @@ class App # rubocop:disable Metrics/ClassLength
     run_program
   end
 
-  def list_rentals #rubocop:disable Metrics/ClassLength
+  def list_rentals # rubocop:disable Metrics/ClassLength
     puts
     if @rentals_list.length.zero?
       p 'There is no rentals to show, Add new one'
