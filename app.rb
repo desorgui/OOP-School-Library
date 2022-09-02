@@ -103,7 +103,7 @@ class App # rubocop:disable Metrics/ClassLength
     name = gets.chomp
     print 'Teacher specialization: '
     specialization = gets.chomp
-    @people_list.push(Teacher.new(age, name, specialization))
+    @people_list.push(Teacher.new(age, specialization, name))
     p 'Teacher created'
     puts
     run_program
