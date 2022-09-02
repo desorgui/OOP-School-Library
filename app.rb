@@ -39,7 +39,7 @@ class App # rubocop:disable Metrics/ClassLength
     when 'f'
       list_rentals
     else
-      exit
+      exitprogram
     end
   end
 
@@ -141,11 +141,9 @@ class App # rubocop:disable Metrics/ClassLength
       index_arr.push(i)
       puts "[#{i}] Name: #{person.name} (#{person.class.name})"
     end
-    until index_arr.include?(index)
-      print 'Choose person number: '
-      index = gets.chomp.to_i
-      person = @people_list[index]
-    end
+    print 'Choose person number: '
+    index = gets.chomp.to_i
+    person = @people_list[index]
     print 'Date of rental (dd-mm-yyyy): '
     date = gets.chomp
     @rentals_list.push(Rental.new(date, book, person))
@@ -180,7 +178,7 @@ class App # rubocop:disable Metrics/ClassLength
     end
   end
 
-  def exit
+  def exitprogram
     puts
     p 'Thank you for using our program'
   end
